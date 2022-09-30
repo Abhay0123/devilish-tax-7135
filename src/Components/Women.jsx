@@ -1,11 +1,12 @@
 import React from "react"
-import { Container } from "@chakra-ui/react";
+import { Container,Box } from "@chakra-ui/react";
+import Footer from "./footer";
 const Women=()=>{
     return (
-       <Container>
+       <Box>  
+       <Footer/>
 
-        
-       </Container>
+       </Box>
 
     )
 }

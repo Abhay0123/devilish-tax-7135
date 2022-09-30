@@ -1,9 +1,10 @@
 import React from "react"
+import Footer from "./footer";
 //import { Container } from "@chakra-ui/react";
 const Men=()=>{
     return (
         <div>
-            men page
+            <Footer/>
         </div>
 
     )

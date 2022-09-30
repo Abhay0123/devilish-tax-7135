@@ -31,7 +31,7 @@ const Navbar = () => {
 <Spacer />
 <Box>
 <Heading as='h1' size='4xl'><Image
-  borderRadius='full'
+  
   
   w='240px'
   h='30px'
@@ -48,25 +48,25 @@ const Navbar = () => {
  
     <Link href='#'><Image
   borderRadius='full'
-  boxSize='20px'
+  boxSize='24px'
   src='https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_India_-_Circle-512.png'
   alt='image'
 /></Link>
     <Link href='#'><Image
   borderRadius='full'
-  boxSize='20px'
+  boxSize='24px'
   src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGMeEbDEy0gsUwg3hv_UUwNHnMXHhcJROvsWmahy9V1w0zJZpau-hG0jqpryJcOdnIEl0&usqp=CAU'
   alt='image'
 /></Link>
     <Link href='#'><Image
   borderRadius='full'
-  boxSize='20px'
+  boxSize='24px'
   src='https://www.svgrepo.com/show/13666/heart.svg'
   alt='image'
 /></Link>
     <Link href='#'><Image
   borderRadius='full'
-  boxSize='20px'
+  boxSize='24px'
   src='https://icons.veryicon.com/png/o/commerce-shopping/merchant-product-icon-library/shopping-32.png'
   alt='image'
 /></Link>

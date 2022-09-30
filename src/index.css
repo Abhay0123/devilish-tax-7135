@@ -25,3 +25,7 @@ code {
 .first{
  border: 1px solid red;
 }
+.text Link{
+  display: flex;
+  justify-content: flex-start;
+}
