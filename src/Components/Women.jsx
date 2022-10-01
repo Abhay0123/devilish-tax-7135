@@ -15,10 +15,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const Women = () => {
+const WomenData = () => {
   const goTo = useNavigate();
   const ChildAllData = () => {
-    return goTo("./AllKidsData");
+    return goTo("./AllWomensData");
   };
 
   return (
@@ -209,4 +209,4 @@ const Women = () => {
     </Box>
   );
 };
-export default Women;
+export default WomenData;

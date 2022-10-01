@@ -1,4 +1,4 @@
-import {Box,Image,SimpleGrid,Heading,Text} from "@chakra-ui/react";
+import {Box,Image,SimpleGrid,Button,Text} from "@chakra-ui/react";
 const kidsdata=[
     {
       "category": "Child",
@@ -1061,8 +1061,10 @@ const ChildData=()=>{
     return (
         <>
        
-     <SimpleGrid columns={[4]} spacing='10px' p='20px'>
-    
+      
+       {/* <Button top='100px' onClick={()=>setOrderBy(asc)}>Order by price-Ascending</Button> */}
+       <SimpleGrid columns={{ base:1,sm:2, md:3, lg:4  }} spacing='10px' p='20px' w='90%' ml='10%'>
+        
           { kidsdata.map((el)=> (
           <Box  mt='120px' mb='-80px'>
           <Image  boxSize='310px' src={el.images}/>
