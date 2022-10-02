@@ -2264,7 +2264,7 @@ const mensData=()=>{
        
       
        {/* <Button top='100px' onClick={()=>setOrderBy(asc)}>Order by price-Ascending</Button> */}
-     <SimpleGrid columns={{ base:1,sm:2, md:3, lg:4  }} spacing='10px' p='20px' w='90%' ml='10%'>
+     <SimpleGrid columns={{ base:1,sm:2, md:3, lg:4  }} spacing='10px' p='20px'>
         
           { menDatas.map((el)=> (
           <Box columns={[2, null, 3]} spacing='40px'  mt='120px' mb='-80px'>

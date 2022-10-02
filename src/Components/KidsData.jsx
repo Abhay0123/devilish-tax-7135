@@ -1,11 +1,14 @@
 import {Box,Image,SimpleGrid,Button,Text} from "@chakra-ui/react";
+import {useContext} from "react";
+import { CartContext } from "./CartContextProvider";
 const kidsdata=[
     {
+      "id":1,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Set Of 2 Boys Sweatshirt",
-      "discounted_price": "679",
-      "strike_price": "3998",
+      "discounted_price": 679,
+      "strike_price": '3998',
       "discount": "(83% OFF)",
       "images": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19888438/2022/9/22/591e68d2-7552-4e8f-a51d-63b6b028a4431663840257994-HELLCAT-Boys-Set-Of-2-Blue--White-Printed-Hooded-Sweatshirt--7.jpg",
@@ -30,10 +33,11 @@ const kidsdata=[
       "rating_count": "5"
     },
     {
+      "id":2,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack Of 5 Printed T-shirt",
-      "discounted_price": "799",
+      "discounted_price": 799,
       "strike_price": "4995",
       "discount": "(84% OFF)",
       "images": [
@@ -59,10 +63,11 @@ const kidsdata=[
       "rating_count": "1.5k"
     },
     {
+      "id":3,
       "category": "Child",
       "title": "VASTRAMAY",
       "subtitle": "Boys Printed Kurti with Dhoti Pants",
-      "discounted_price": "989",
+      "discounted_price":989,
       "strike_price": "2999",
       "discount": "(67% OFF)",
       "images": [
@@ -90,10 +95,11 @@ const kidsdata=[
       "rating_count": "1.1k"
     },
     {
+      "id":3,
       "category": "Child",
       "title": "A.T.U.N.",
       "subtitle": "Boys Casual Shirt",
-      "discounted_price": "681",
+      "discounted_price":681,
       "strike_price": "2199",
       "discount": "(69% OFF)",
       "images": [
@@ -130,10 +136,11 @@ const kidsdata=[
       "rating_count": "31"
     },
     {
+      "id":4,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack of 3 Solid Track Pants",
-      "discounted_price": "808",
+      "discounted_price": 808,
       "strike_price": "2994",
       "discount": "(73% OFF)",
       "images": [
@@ -151,10 +158,11 @@ const kidsdata=[
       "rating_count": "165"
     },
     {
+      "id":5,
       "category": "Child",
       "title": "MANZON",
       "subtitle": "Kids Velvet 6 Pcs Set",
-      "discounted_price": "1099",
+      "discounted_price": 1099,
       "strike_price": "1999",
       "discount": "(45% OFF)",
       "images": [
@@ -172,10 +180,11 @@ const kidsdata=[
       "rating_count": "41"
     },
     {
+      "id":6,
       "category": "Child",
       "title": "max",
       "subtitle": "Boys Pack Of 5 T-shirts",
-      "discounted_price": "569",
+      "discounted_price": 569,
       "strike_price": "949",
       "discount": "(40% OFF)",
       "images": [
@@ -193,10 +202,11 @@ const kidsdata=[
       "rating_count": "27"
     },
     {
+      "id":7,
       "category": "Child",
       "title": "Urbano Juniors",
       "subtitle": "Boys Slim Fit Denim Joggers",
-      "discounted_price": "601",
+      "discounted_price":601,
       "strike_price": "1399",
       "discount": "(57% OFF)",
       "images": [
@@ -222,10 +232,11 @@ const kidsdata=[
       "rating_count": "2.3k"
     },
     {
+      "id":8,
       "category": "Child",
       "title": "PLUM TREE",
       "subtitle": "Boys Camouflage Pure Cotton Joggers",
-      "discounted_price": "636",
+      "discounted_price": 636,
       "strike_price": "1249",
       "discount": "(49% OFF)",
       "images": [
@@ -252,10 +263,11 @@ const kidsdata=[
       "rating_count": "286"
     },
     {
+      "id":9,
       "category": "Child",
       "title": "Hopscotch",
       "subtitle": "Boys Shirt Pyjamas & Blazer",
-      "discounted_price": "621",
+      "discounted_price": 621,
       "strike_price": "1479",
       "discount": "(58% OFF)",
       "images": [
@@ -273,10 +285,11 @@ const kidsdata=[
       "rating_count": "683"
     },
     {
+      "id":10,
       "category": "Child",
       "title": "MANZON",
       "subtitle": "Kids Pack Of 3 Thermal Sets",
-      "discounted_price": "799",
+      "discounted_price": 799,
       "strike_price": "1999",
       "discount": "(60% OFF)",
       "images": [
@@ -308,10 +321,11 @@ const kidsdata=[
       "rating_count": "204"
     },
     {
+      "id":11,
       "category": "Child",
       "title": "YK Disney",
       "subtitle": "Boys Printed Applique T-shirt",
-      "discounted_price": "532",
+      "discounted_price": 532,
       "strike_price": "2049",
       "discount": "(74% OFF)",
       "images": [
@@ -329,10 +343,11 @@ const kidsdata=[
       "rating_count": "76"
     },
     {
+      "id":12,
       "category": "Child",
       "title": "UTH by Roadster",
       "subtitle": "Boys Solid Hooded Sweatshirt",
-      "discounted_price": "584",
+      "discounted_price": 584,
       "strike_price": "1299",
       "discount": "(55% OFF)",
       "images": [
@@ -350,10 +365,11 @@ const kidsdata=[
       "rating_count": "93"
     },
     {
+      "id":13,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Set of 2 Colourblocked T-shirt",
-      "discounted_price": "559",
+      "discounted_price": 559 ,
       "strike_price": "1999",
       "discount": "(72% OFF)",
       "images": [
@@ -379,10 +395,11 @@ const kidsdata=[
       "rating_count": "475"
     },
     {
+      "id":14,
       "category": "Child",
       "title": "Nauti Nati",
       "subtitle": "Boys Kurta Set & Nehru Jacket",
-      "discounted_price": "1199",
+      "discounted_price":1199,
       "strike_price": "1999",
       "discount": "(40% OFF)",
       "images": [
@@ -400,10 +417,11 @@ const kidsdata=[
       "rating_count": "36"
     },
     {
+      "id":15,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack Of 3 Shorts",
-      "discounted_price": "654",
+      "discounted_price": 654,
       "strike_price": "2847",
       "discount": "(77% OFF)",
       "images": [
@@ -421,10 +439,11 @@ const kidsdata=[
       "rating_count": "234"
     },
     {
+      "id":16,
       "category": "Child",
       "title": "JBN Creation",
       "subtitle": "Boys Kurta with Pyjamas",
-      "discounted_price": "999",
+      "discounted_price": 999,
       "strike_price": "1999",
       "discount": "(50% OFF)",
       "images": [
@@ -452,10 +471,11 @@ const kidsdata=[
       "rating_count": "1.1k"
     },
     {
+      "id":17,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Printed Bio Finish T-shirt",
-      "discounted_price": "799",
+      "discounted_price": 799,
       "strike_price": "4995",
       "discount": "(84% OFF)",
       "images": [
@@ -481,10 +501,11 @@ const kidsdata=[
       "rating_count": "253"
     },
     {
+      "id":18,
       "category": "Child",
       "title": "max",
       "subtitle": "Boys Pack of 5 Printed T-shirt",
-      "discounted_price": "569",
+      "discounted_price": 569,
       "strike_price": "949",
       "discount": "(40% OFF)",
       "images": [
@@ -502,10 +523,11 @@ const kidsdata=[
       "rating_count": "605"
     },
     {
+      "id":19,
       "category": "Child",
       "title": "x2o",
       "subtitle": "Pack of 6 Cotton Lounge Pants",
-      "discounted_price": "899",
+      "discounted_price": 899,
       "strike_price": "2999",
       "discount": "(70% OFF)",
       "images": [
@@ -534,10 +556,11 @@ const kidsdata=[
       "rating_count": "2.9k"
     },
     {
+      "id":20,
       "category": "Child",
       "title": "YK Marvel",
       "subtitle": "Boys Avengers Hooded Jacket",
-      "discounted_price": "1394",
+      "discounted_price": 1394,
       "strike_price": "3099",
       "discount": "(55% OFF)",
       "images": [
@@ -566,10 +589,11 @@ const kidsdata=[
       "rating_count": "301"
     },
     {
+      "id":21,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack Of 2 Sweatshirt",
-      "discounted_price": "679",
+      "discounted_price": 679,
       "strike_price": "3998",
       "discount": "(83% OFF)",
       "images": [
@@ -595,10 +619,11 @@ const kidsdata=[
       "rating_count": "8"
     },
     {
+      "id":22,
       "category": "Child",
       "title": "BONKIDS",
       "subtitle": "Boys Spiderman Printed Slim Fit Pure Cotton T-shirt",
-      "discounted_price": "498",
+      "discounted_price": 498,
       "strike_price": "1660",
       "discount": "(70% OFF)",
       "images": [
@@ -630,10 +655,11 @@ const kidsdata=[
       "rating_count": "1.7k"
     },
     {
+      "id":23,
       "category": "Child",
       "title": "HERE&NOW",
       "subtitle": "Boys Slim Fit Jeans",
-      "discounted_price": "665",
+      "discounted_price": 665,
       "strike_price": "1799",
       "discount": "(63% OFF)",
       "images": [
@@ -651,10 +677,11 @@ const kidsdata=[
       "rating_count": "143"
     },
     {
+      "id":24,
       "category": "Child",
       "title": "Pantaloons Baby",
       "subtitle": "Boys Printed Track Pants",
-      "discounted_price": "269",
+      "discounted_price": 269,
       "strike_price": "299",
       "discount": "(10% OFF)",
       "images": [
@@ -672,10 +699,11 @@ const kidsdata=[
       "rating_count": null
     },
     {
+      "id":25,
       "category": "Child",
       "title": "HRX by Hrithik Roshan",
       "subtitle": "U-17 Boys Lifestyle Tracksuit",
-      "discounted_price": "1499",
+      "discounted_price": 1499,
       "strike_price": "2999",
       "discount": "(50% OFF)",
       "images": [
@@ -693,10 +721,11 @@ const kidsdata=[
       "rating_count": "62"
     },
     {
+      "id":26,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack of 3 T-shirts",
-      "discounted_price": "389",
+      "discounted_price": 389,
       "strike_price": "2997",
       "discount": "(87% OFF)",
       "images": [
@@ -714,10 +743,11 @@ const kidsdata=[
       "rating_count": "309"
     },
     {
+      "id":27,
       "category": "Child",
       "title": "Aj DEZInES",
       "subtitle": "Boys Solid Kurta Set",
-      "discounted_price": "809",
+      "discounted_price": 809,
       "strike_price": "2999",
       "discount": "(73% OFF)",
       "images": [
@@ -746,10 +776,11 @@ const kidsdata=[
       "rating_count": "181"
     },
     {
+      "id":28,
       "category": "Child",
       "title": "Superminis",
       "subtitle": "Pack of 6 Cotton Pyjamas",
-      "discounted_price": "884",
+      "discounted_price": 884,
       "strike_price": "1499",
       "discount": "(41% OFF)",
       "images": [
@@ -767,10 +798,11 @@ const kidsdata=[
       "rating_count": "278"
     },
     {
+      "id":29,
       "category": "Child",
       "title": "YK Disney",
       "subtitle": "Boys Pack of 3 Printed T-shirt",
-      "discounted_price": "620",
+      "discounted_price": 620,
       "strike_price": "2299",
       "discount": "(73% OFF)",
       "images": [
@@ -788,10 +820,11 @@ const kidsdata=[
       "rating_count": "44"
     },
     {
+      "id":30,
       "category": "Child",
       "title": "VASTRAMAY",
       "subtitle": "Kids-Boys Kurta with Trousers",
-      "discounted_price": "1649",
+      "discounted_price": 1649,
       "strike_price": "2999",
       "discount": "(45% OFF)",
       "images": [
@@ -823,10 +856,11 @@ const kidsdata=[
       "rating_count": "17"
     },
     {
+      "id":31,
       "category": "Child",
       "title": "Luke & Lilly",
       "subtitle": "Boys Printed Sweatshirt",
-      "discounted_price": "359",
+      "discounted_price": 359,
       "strike_price": "1799",
       "discount": "(80% OFF)",
       "images": [
@@ -844,10 +878,11 @@ const kidsdata=[
       "rating_count": "116"
     },
     {
+      "id":32,
       "category": "Child",
       "title": "Bodycare Kids",
       "subtitle": "Boys Pack Of 3 Cotton Briefs",
-      "discounted_price": null,
+      "discounted_price": 305,
       "strike_price": "405",
       "discount": null,
       "images": [
@@ -865,10 +900,11 @@ const kidsdata=[
       "rating_count": null
     },
     {
+      "id":33,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Colourblocked Sweatshirt",
-      "discounted_price": "679",
+      "discounted_price": 679,
       "strike_price": "3998",
       "discount": "(83% OFF)",
       "images": [
@@ -893,12 +929,13 @@ const kidsdata=[
       "rating_count": null
     },
     {
+      "id":34,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Set Of 3 Solid Cotton Track Pants",
       "discounted_price": "807",
       "strike_price": "2991",
-      "discount": "(73% OFF)",
+      "discount": 1001,
       "images": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18485368/2022/6/4/7753bb83-ff1c-4820-9d81-f95182ea21e61654342907960HELLCATBoysSetOf3SolidCottonTrackPants1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18485368/2022/6/4/7753bb83-ff1c-4820-9d81-f95182ea21e61654342907960HELLCATBoysSetOf3SolidCottonTrackPants1.jpg",
@@ -912,10 +949,11 @@ const kidsdata=[
       "rating_count": "99"
     },
     {
+      "id":35,
       "category": "Child",
       "title": "max",
       "subtitle": "Boys Pack Of 5 T-shirts",
-      "discounted_price": "569",
+      "discounted_price": 569,
       "strike_price": "949",
       "discount": "(40% OFF)",
       "images": [ "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/15181714/2021/8/18/a72b2c3b-3be8-41ba-9d3a-5f0c06842cce1629274439322VastramayBoysMulticolor-Base-WhiteCottonBlendKurtaPyjamaSet1.jpg",],
@@ -924,10 +962,11 @@ const kidsdata=[
       "rating_count": "17"
     },
     {
+      "id":36,
       "category": "Child",
       "title": "YK",
       "subtitle": "Boys Camouflage Sweatshirt",
-      "discounted_price": "600",
+      "discounted_price": 600,
       "strike_price": "1999",
       "discount": "(Rs. 1399 OFF)",
       "images": [ "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/18910878/2022/6/29/e16d6879-8864-49c0-ae2a-5f6bd683f0581656519377064MickeyMouseboystshirt1.jpg",
@@ -938,10 +977,11 @@ const kidsdata=[
     },
    
     {
+      "id":37,
       "category": "Child",
       "title": "Marks & Spencer",
       "subtitle": "Boys Pack of 5 Solid Trunks",
-      "discounted_price": null,
+      "discounted_price": 500,
       "strike_price": "999",
       "discount": null,
       "images": [ "https://assets.myntassets.com/f_webp,dpr_2.2,q_60,w_210,c_limit,fl_progressive/assets/images/18485368/2022/6/4/7753bb83-ff1c-4820-9d81-f95182ea21e61654342907960HELLCATBoysSetOf3SolidCottonTrackPants1.jpg","https://assets.myntassets.com/f_webp,dpr_2.4,q_60,w_210,c_limit,fl_progressive/assets/images/18485368/2022/6/4/7753bb83-ff1c-4820-9d81-f95182ea21e61654342907960HELLCATBoysSetOf3SolidCottonTrackPants1.jpg",
@@ -968,10 +1008,11 @@ const kidsdata=[
    
    
     {
+      "id":38,
       "category": "Child",
       "title": "HELLCAT",
       "subtitle": "Boys Pack Of 3 Solid Track Pants",
-      "discounted_price": "808",
+      "discounted_price": 808,
       "strike_price": "2994",
       "discount": "(73% OFF)",
       "images": [
@@ -991,10 +1032,11 @@ const kidsdata=[
       "rating_count": "9"
     },
     {
+      "id":39,
       "category": "Child",
       "title": "H&M",
       "subtitle": "Boys Printed T-shirt",
-      "discounted_price": "239",
+      "discounted_price": 239,
       "strike_price": "299",
       "discount": "(20% OFF)",
       "images": [
@@ -1015,10 +1057,11 @@ const kidsdata=[
     },
   
     {
+      "id":40,
       "category": "Child",
       "title": "Pantaloons Junior",
       "subtitle": "Boys Blue Tapered Fit Jeans",
-      "discounted_price": null,
+      "discounted_price": 399,
       "strike_price": "699",
       "discount": null,
       "images": [
@@ -1038,10 +1081,11 @@ const kidsdata=[
       "rating_count": "7"
     },
     {
+      "id":41,
       "category": "Child",
       "title": "H&M",
       "subtitle": "Boys 2-Pack Joggers",
-      "discounted_price": null,
+      "discounted_price": 499,
       "strike_price": "1499",
       "discount": null,
       "images": [
@@ -1055,7 +1099,14 @@ const kidsdata=[
      ]}]
  
 const ChildData=()=>{
-     
+ 
+  const {cartData , handleCart} = useContext(CartContext);
+  const handleAddToCart = (el)=>{
+
+    handleCart(el)
+   
+  }
+
     
 
     return (
@@ -1063,16 +1114,17 @@ const ChildData=()=>{
        
       
        {/* <Button top='100px' onClick={()=>setOrderBy(asc)}>Order by price-Ascending</Button> */}
-       <SimpleGrid columns={{ base:1,sm:2, md:3, lg:4  }} spacing='10px' p='20px' w='90%' ml='10%'>
+       <SimpleGrid columns={{ base:1,sm:2, md:3, lg:4  }} spacing='10px' p={{base:'20px',lg:"20px"}} >
         
           { kidsdata.map((el)=> (
-          <Box  mt='120px' mb='-80px'>
+          <Box key={el.id}  mt='120px' mb='-80px' p={{base:"20px",lg:"10px"}} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
           <Image  boxSize='310px' src={el.images}/>
           <Text color='gray'>New Season</Text>
          <Text fontSize='20px' as='b'> {el.title} </Text>
          <Text fontSize='16px'> {el.subtitle} </Text>
 
-         <Text mt='20px'>${el.strike_price}</Text>
+         <Text mt='20px'>₹{el.strike_price}</Text>
+         <Button onClick={()=>handleAddToCart(el)}  size='xs' colorScheme='green'>Add To Cart</Button>
           </Box> ))}  
      </SimpleGrid>
      </>

@@ -6,7 +6,7 @@ import Child from "./Child.jsx";
 import KidsData from "./AllKidsData.jsx";
 import DataOfWomen from "./AllWomensData.jsx";
 import DataOfMen from "./AllMenData.jsx";
-
+import Cart from './Cart';
 const AllRoutes = () => {
   return (
     
@@ -17,6 +17,7 @@ const AllRoutes = () => {
         <Route path='/child/AllKidsData'  element={ <KidsData/> }></Route>
         <Route path='/women/AllWomensData'  element={ <DataOfWomen/>}></Route>
         <Route path='/men/AllMenData'  element={ <DataOfMen/>}></Route>
+        <Route path='/cart'  element={ <Cart/>}></Route>
        
       </Routes>
     

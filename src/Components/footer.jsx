@@ -27,30 +27,32 @@ Button,
  import {QuestionOutlineIcon, ChatIcon } from '@chakra-ui/icons'
 const Footer=()=>{
     return (
-        <Box>
-<SimpleGrid columns={[2, null, 3]} spacing='30px' mt='50px'>
+        <Box p='20px'>
+<SimpleGrid columns={{base:1,md:3,lg:3}} spacing='30px' mt='50px'>
   <VStack  height='110px' border='1px solid gray' p='10px'>
  <Image display='Flex' justifyContent='flex-start' boxSize='30px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Clothes_hanger_icon_3.svg/800px-Clothes_hanger_icon_3.svg.png?20150106164522'/>
  
- <Text>HOW TO SHOP </Text>
+ <Text textAlign='Left'>HOW TO SHOP </Text>
  <Text>Your guide to shopping and placing orders</Text>
   </VStack>
   <VStack  height='110px' border='1px solid gray' p='10px'>
   <Icon as={QuestionOutlineIcon} w={6} h={6}  />
 
- <Text>HOW TO SHOP </Text>
- <Text>Your guide to shopping and placing orders</Text>
+ <Text>FAQS
+ </Text>
+ <Text>Your questions answered</Text>
   </VStack>
   <VStack  height='110px' border='1px solid gray' p='10px'>
   <Icon as={ChatIcon} w={6} h={6}  />
  
- <Text>HOW TO SHOP </Text>
- <Text>Your guide to shopping and placing orders</Text>
+ <Text>NEED HELP?
+</Text>
+ <Text>Contact our global Customer Service team</Text>
   </VStack>
    
 </SimpleGrid>
     
-    <Container maxW='2xl' w='400px' mt='100px'  centerContent>
+    <Container maxW='2xl' w={{base:'300px',lg:'400px'}} mt='100px'  centerContent>
         <VStack>
    <Heading as='h4' >SIGN UP AND GET 15% OFF</Heading>
    <Text>Sign up for promotions, tailored new arrivals, stock updates and more – straight to your inbox</Text>
@@ -96,6 +98,8 @@ const Footer=()=>{
 </VStack>
 <Text>By signing up, you agree to our <Link textDecoration='underLined'> Privacy Policy</Link>. Unsubscribe anytime at the bottom of our emails.</Text>
     </Container>
+
+    
         <Box  mt='70px'>  
         <Box p='10px' color='white' bg='black' w='full' h='450px'>  
            <SimpleGrid minChildWidth='120px' spacing='40px' >
